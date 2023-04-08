@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 const Nav = () => {
     const [open, setOpen] = useState(false)
     return (
-        <nav className='flex flex-col md:flex-row justify-between items-center md:mx-20 py-5'>
+        <nav className='flex flex-col md:flex-row justify-between items-center md:px-20 py-5 bg-purple-500'>
             <div className="logo">
                 <h1 className='text-4xl font-bold mb-7 flex items-center justify-between gap-12'>
                     <div>
@@ -16,7 +16,7 @@ const Nav = () => {
                     </div>
                 </h1>
             </div>
-            <ul className='flex flex-col items-center md:flex-row gap-5'>
+            <ul className={`bg-purple-500 flex flex-col items-center md:flex-row gap-5 md:static absolute duration-700 ${open ? 'top-24' : '-top-72'}`}>
                 <li className='mb-5 md:mb-0'>
                     <a href="" className='px-5 py-3 hover:bg-purple-600 hover:text-white rounded-lg'>Home</a>
                 </li>
